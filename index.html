@@ -268,6 +268,40 @@ img {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.fade-in-text {
+  font-family:;
+  font-size:;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
 .main {
 display: block;
   height: 100%;
@@ -313,7 +347,7 @@ function closeNav() {
 <div style="margin-top:15px;margin-bottom:0px;text-align:center;margin-left:;margin-right:;" class="container">
 <img id="img1" href="" src="img2.jpg" alt="" width="100%" height="auto" style="margin:0;padding:0;filter: brightness(75%);" class="center">
 <img id="img2" href="" src="img.jpg" alt="" width="100%" height="auto" style="margin:0;padding:0;filter: brightness(75%);" class="center">
-  <div class="centered"><br><br><br><p2 style="color:#fff!important;">Welcome to</p2>
+  <div class="centered" class="fade-in-text"><br><br><br><p2 style="color:#fff!important;">Welcome to</p2>
   <h1>BLOEMPRINT</h1>
   <p>The Best of Print!</p>
   <a aria-label="" href="javascript:setTimeout(()=>{window.location = '#contact' },1000);" style="text-align:center!important;">
