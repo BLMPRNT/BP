@@ -331,10 +331,25 @@ display: block;
   height: 0;
   font-size: 14px !important;
 }
-.unclickable {
-        pointer-events: none;
-        user-select: none;
-  }
+.widget-wrapper {
+            position: relative;
+            width: 765px;
+            height: 510px;
+        }
+        .widget-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .widget-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* Transparent overlay */
+            z-index: 1;
+        }
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9409948867672595"
      crossorigin="anonymous"></script>
@@ -431,9 +446,10 @@ function closeNav() {
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-<a href="https://www.instagram.com/bloemprint" target="_blank">
-  <iframe src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:765px; height:510px" title="Posts from Instagram"></iframe>
-</a>
+<div class="widget-wrapper">
+        <iframe src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Posts from Instagram"></iframe>
+        <a href="https://www.instagram.com/bloemprint" target="_blank" class="widget-overlay"></a>
+</div>
 <footer style="padding-top:10px;text-align:left!important;">
 <div class="announcement" style="margin-top:35px!important;margin-bottom:5px!important;"><p style="color:#fff!important;background:#27628D;font-weight:400!important;font-size:15px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin:0!important;padding-top:5px;"><marquee>R90 delivery fee for orders in Bloemfontein and R150 for all other areas in South Africa.</marquee></p></div>
 <div style="margin-top:30px;margin-bottom:25px;text-align:center!important;"><a href="/"><img class="center" src="BPLogo.svg" href="/" alt="" width="120px" height="auto"></a></div>
