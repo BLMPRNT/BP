@@ -337,9 +337,8 @@ display: block;
     width: 100%;
     max-width: 765px; /* Maximum width of the widget */
     margin: 0 auto; /* Center the widget */
-    padding:  100%; /* Aspect ratio for 765x510 */
+    padding-top: 56.25%; /* 765x510 aspect ratio */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
-    padding:;
 }
 
 /* Ensure the iframe is responsive */
@@ -351,6 +350,8 @@ display: block;
     height: 100%;
     border: none;
 }
+
+/* Ensure overlay doesn't affect layout */
 .overlay {
     position: absolute;
     top: 0;
@@ -358,8 +359,8 @@ display: block;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0); /* Transparent background */
-    pointer-events: all; /* Ensure overlay blocks interactions */
-}  
+    pointer-events: none; /* Allow interactions through overlay */
+}
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9409948867672595"
      crossorigin="anonymous"></script>
