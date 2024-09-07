@@ -20,166 +20,70 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #000;
 }
 html {
   scroll-behavior: smooth;
 }
 .header {
-     vertical-align: middle;
+  text-align: center;
+  padding: 10px;
 }
 .logo {
+  max-height: 50px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-     letter-spacing:;
-     font-weight: 700;
-     position: relative;
-     padding: 0 0 10px 0;
-     line-height:;
-     color:;
-     font-family: 'Poppins', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 h1 {
-     font-size: 34px;
-     margin: 5px;
-     letter-spacing: 0.5px;
-     margin-left: 35px;
-     margin-right: 35px;
+  font-size: 2.5rem;
+  color: #ED0D63;
+  margin-bottom: 10px;
 }
-p3 {
-     letter-spacing: 1px;
-     font-weight: 700;
-     position: relative;
-     padding: 0 0 10px 0;
-     line-height:;
-     color: #AF164E !important;
-     font-size: 34px;
-     margin: 5px;
-}
-
 h2 {
-     font-size: 24px;
-     margin-left: 10px;
-     margin-right: 10px;
-     color: #000;
+  font-size: 2rem;
+  color: #27628D;
 }
-
-h3 {
-     font-size: 18px;
-}
-
-h4 {
-     font-size: 16px
-}
-
-h5 {
-     font-size: 14px
-}
-
-h6 {
-     font-size: 13px
+h3, h4, h5, h6 {
+  font-size: 1.5rem;
+  color: #000;
 }
 p {
-     margin-left: 30px;
-     margin-right: 30px;
-     margin-top: 15px;
-     margin-bottom: 15px;
-     font-weight: 400;
-     font-size: 16.5px;
-     line-height:;
-     font-family: 'Poppins', sans-serif;
-     letter-spacing: 1px;
+  font-size: 1rem;
+  margin: 15px auto;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #333;
 }
-p2 {
-     font-size: 24px;
-     letter-spacing: 1px;
-     margin-left: 10px;
-     margin-right: 10px;
-     color: #000;
-     font-weight: 500;
-     line-height: 2;
-}
-a:link {
+a {
   color: #ED0D63;
-  text-decoration: none !important;
-}
-a:visited {
-  color: #ED0D63;
-  text-decoration: none !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
-  color: #ED0D63;
-  text-decoration: none !important;
-}
-a:active {
-  color: #ED0D63;
-  text-decoration: none !important;
-}
-ul,
-li,
-ol {
-     margin: 0px;
-     padding: 0px;
-     list-style: none;
-}
-ul{
-  display:none;
+  color: #AF164E;
 }
 
-ul.active{
-  display:block;
-}
-.right_button {
-     text-align: right;
-     border: 0;
-     width:;
-     padding: 5px;
-     margin: 0 auto;
-     vertical-align: middle;
-}
-img {
-  pointer-events: none;
-  display: inline-block;
-}
-#img1 {display:block;}
-#img2 {display:none}
-
-@media all and (max-width: 499px) {
-    #img1 {display: none;}
-    #img2 {display: block;}
-}
 .announcement {
-  display: block;
-  height: 100%;
-  text-align: center;
-  width: 100%;
-  background: #27628D !important;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  margin:;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 15px !important;
-  vertical-align: middle;
-  font-size: 0.75em;
-  line-height: 1.4 !important;
-  border-bottom: 0px solid #ddd;
-  z-index: 1000 !important;
+  background-color: #27628D;
+  color: white;
+  padding: 10px 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
-.announcement a { 
-  color: #fff; 
+.announcement a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
 }
 .announcement a:hover {
-  color:;
-  background:;
+  color: #fff;
 }
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -189,287 +93,182 @@ img {
   left: 0;
   background-color: #27628D;
   overflow-x: hidden;
-  transition: 0.7s;
+  transition: 0.5s;
   padding-top: 60px;
-  vertical-align: middle;
 }
 .sidenav a {
-  padding: 8px 20px 8px 20px;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 18px;
-  font-weight:;
-  text-transform: uppercase;
+  font-size: 1.2rem;
   color: #fff;
   display: block;
-  transition: 1.5s;
-  letter-spacing: 1px;
+  transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 5px;
-  font-size: 36px;
-  margin-left: 5px;
-  font-weight: 300 !important;
+  right: 15px;
+  font-size: 2rem;
 }
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;vertical-align: middle;}
-  .sidenav a {font-size: 18px;}
+
+#nav-toggle {
+  display: none;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:;
+
+.header .nav-icon {
+  cursor: pointer;
+  font-size: 28px;
+  color: #27628D;
+  display: inline-block;
 }
-.fa {
-  padding: 12px;
-  font-size: 25px;
-  width:;
-  text-align: center;
-  text-decoration: none;
-  margin-bottom:5px;
-}
+
 .container {
   position: relative;
   text-align: center;
-  color: white;
+  margin: 20px 0;
 }
+
+.container img {
+  width: 100%;
+  height: auto;
+  filter: brightness(85%);
+}
+
 .centered {
   position: absolute;
   top: 50%;
-  left:50%;
-  text-align: center !important;
+  left: 50%;
   transform: translate(-50%, -50%);
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:;
-  text-align: center !important;
-}
-.fa:hover {
-    opacity: 1;
-    background:;
-}
-#about {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#services {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#contact {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.fade-in-text {
-  font-family:;
-  font-size:;
-  animation: fadeIn 3s;
-  -webkit-animation: fadeIn 3s;
-  -moz-animation: fadeIn 3s;
-  -o-animation: fadeIn 3s;
-  -ms-animation: fadeIn 3s;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-moz-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@-ms-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-  }
-.main {
-display: block;
-  height: 100%;
   text-align: center;
-  width: 100%;
-  background: #fff !important;
-  color: #000;
-  font-family: 'Poppins', sans-serif;
-  margin:;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 15px !important;
-  vertical-align: middle;
-  font-size: 0.75em;
-  line-height: 1.4 !important;
-  border-bottom: 0px solid #ddd;
 }
-#rc {
-  border-radius: 50px;
+
+.main {
+  padding: 40px 10px;
+}
+
+.button {
   border: 1.5px solid #ED0D63;
-  padding: 10px;
-  width:;
-  height: 0;
-  font-size: 14px !important;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #ED0D63;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
-/* Container for the widget */
-.widget-container {
-    position: relative;
-    width: 100%;
-    max-width: 765px; /* Maximum width of the widget */
-    margin: 0 auto; /* Center the widget */
-    padding-top: 66.67%; /* Aspect ratio for 765x510 (765/510 ≈ 1.5) */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-/* Ensure the iframe is responsive */
-.widget-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+.button:hover {
+  background-color: #ED0D63;
+  color: #fff;
 }
 
-/* Ensure overlay fits container */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0); /* Transparent background */
-    pointer-events: none; /* Allow clicks to pass through */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .container img {
+    filter: brightness(70%);
+  }
+  .announcement {
+    font-size: 0.8rem;
+  }
 }
+
+@media (max-width: 500px) {
+  .container img {
+    display: none;
+  }
+}
+
 </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9409948867672595"
-     crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="announcement"><p style="color:#fff!important;background:#27628D;font-weight:600!important;text-transform:;font-family:'Poppins', sans-serif;letter-spacing:1.7;"><a href="tel:+27717080618" style="font-family:;font-style:;font-weight:;font-size:11.5px!important;text-transform:uppercase;text-decoration:underline;color:#fff!important;">+27 71 708 0618</a><br><a href="mailto:info@bloemprint.co.za" style="font-family:;font-style:;font-weight:;font-size:11.5px!important;text-transform:uppercase;text-decoration:underline;color:#fff!important;">info@bloemprint.co.za</a><br><a aria-label="Chat on WhatsApp" href="https://wa.me/27717080618" style="display:;text-align:center!important;margin:0!important;">
-  <img class="center" alt="Chat on WhatsApp" src="wabuttonwhitelarge.svg" width="160" class="center"></a></p></div>
-<div class="header">
- <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="javascript:setTimeout(()=>{window.location = '#about' },1000);" onclick="closeNav()">About</a>
-  <a href="javascript:setTimeout(()=>{window.location = '#services' },1000);" width="100%" onclick="closeNav()">Services</a>
-  <a href="javascript:setTimeout(()=>{window.location = '#contact' },1000);" onclick="closeNav()">Contact</a>
-  <div style="margin:5px;"><a href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="border: 1.5px solid #fff;display:inline-block;border-radius: 50px;font-size:14px!important;text-transform:none!important;margin:5px;margin-left:15px;background:;color:#fff;">Get A Quote</a>
-  <a href="https://bloemprint.co.za/price-list" style="border: 1.5px solid #fff;display:inline-block;border-radius: 50px;font-size:14px!important;text-transform:none!important;margin:5px;margin-left:15px;background:;color:#fff;">See Prices</a></div>
-  <a href="https://www.instagram.com/bloemprint" style="color:#fff;display:inline-block;" onclick="closeNav()"><i class="fa fa-instagram" style="font-size:22px!important;"></i></a><a href="https://www.facebook.com/profile.php?id=100093587892651" style="color:#fff;display:inline-block;" onclick="closeNav()"><i class="fa fa-facebook" style="font-size:22px!important;display:;"></i></a><a href="https://wa.me/c/27717080618" style="color:#fff;display:inline-block;" onclick="closeNav()"><i class="fa fa-whatsapp" style="font-size:22px!important;display:;"></i></a>
- </div>
+
+<div class="announcement">
+  <p><a href="tel:+27717080618">+27 71 708 0618</a> | <a href="mailto:info@bloemprint.co.za">info@bloemprint.co.za</a></p>
 </div>
-<div style="vertical-align:middle!important;"><a href="/" style="vertical-align:;margin-left:20px;display:inline-block!important;"><img class="center" src="BPLogo.svg" alt="" width="auto" height="50px"></a><span style="float:right;font-size:28px;cursor:pointer;color:#27628D;display:inline-block!important;vertical-align:;padding:7px;margin-right:20px;" width="auto" height="50px" onclick="openNav()">&#9776; </span></div>
+
+<div class="header">
+  <a href="/"><img src="BPLogo.svg" alt="BloemPrint" class="logo"></a>
+  <span class="nav-icon" onclick="openNav()">&#9776;</span>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+  <a href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20">Get A Quote</a>
+  <a href="https://bloemprint.co.za/price-list">See Prices</a>
+</div>
+
+<div class="container">
+  <img src="img2.jpg" alt="BloemPrint">
+  <div class="centered">
+    <h1>Welcome to BLOEMPRINT</h1>
+    <p>The Best of Print!</p>
+  </div>
+</div>
+
+<div class="main" id="about">
+  <h1>About <span style="color:#AF164E;">Us</span></h1>
+  <p>Based in Bloemfontein, we specialize in providing high-quality printing services for a wide range of needs. Whether you're looking to promote your business or organization, create custom t-shirts for an event or team, or print personalized calendars and posters for your home, we've got your back.</p>
+</div>
+
+<div class="main" id="services">
+  <h1>What We <span style="color:#AF164E;">Offer</span></h1>
+  <p>☟</p>
+  <h2>T-Shirt Printing ✓</h2>
+  <img src="t-shirts.png" alt="T-Shirt Printing" width="80%">
+  <p>Perfect for businesses, sports teams, schools, or anyone looking for custom t-shirts.</p>
+    <h2>Caps ✓</h2>
+  <img src="caps.png" alt="Cap Printing" width="80%">
+  <p>Get your custom branded caps, perfect for promotions or team events.</p>
+  
+  <h2>Business Cards ✓</h2>
+  <img src="business-cards.png" alt="Business Card Printing" width="80%">
+  <p>We offer high-quality business cards that will help you leave a lasting impression.</p>
+
+  <h2>Flyers & Brochures ✓</h2>
+  <img src="flyers.png" alt="Flyer Printing" width="80%">
+  <p>Reach out to a larger audience with professionally printed flyers and brochures.</p>
+
+  <h2>Posters ✓</h2>
+  <img src="posters.png" alt="Poster Printing" width="80%">
+  <p>We design and print vibrant posters for events, promotions, or personal use.</p>
+
+  <h2>Calendars ✓</h2>
+  <img src="calendars.png" alt="Calendar Printing" width="80%">
+  <p>Keep your brand visible year-round with customized calendar prints.</p>
+</div>
+
+<div class="main" id="contact">
+  <h1>Contact <span style="color:#AF164E;">Us</span></h1>
+  <p>Feel free to reach out to us with any questions or to request a quote. We're here to help!</p>
+  <p><a href="tel:+27717080618">+27 71 708 0618</a> | <a href="mailto:info@bloemprint.co.za">info@bloemprint.co.za</a></p>
+  <a href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" class="button">Get A Quote</a>
+  <a href="https://bloemprint.co.za/price-list" class="button">See Prices</a>
+</div>
+
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
+
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
-<div style="margin-top:15px;margin-bottom:0px;text-align:center;margin-left:;margin-right:;z-index:-100!important;" class="container">
-<img id="img1" href="" src="img2.jpg" alt="" width="100%" height="auto" style="margin:0;padding:0;filter: brightness(85%);" class="center">
-<img id="img2" href="" src="img.jpg" alt="" width="100%" height="auto" style="margin:0;padding:0;filter: brightness(85%);" class="center">
-  <div class="centered" style="z-index:;"><div class="fade-in-text"><br><br><br><p2 style="color:#fff!important;">Welcome to</p2>
-  <h1>BLOEMPRINT</h1>
-  <p>The Best of Print!</p></div>
-  <a aria-label="" href="javascript:setTimeout(()=>{window.location = '#contact' },1000);" style="text-align:center!important;z-index:100!important;display:none;">
-  <img class="center" alt="Contact Us" src="cu.svg" height="45" class="center" style="z-index:100!important;"></a></div>
-</div>
-<div class="announcement"><p style="color:#fff!important;background:#27628D;font-weight:400!important;font-size:15px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin: 0 !important;padding-top:5px;"><marquee>Nationwide delivery — door-to-door courier or via PAXI.</marquee></p></div>
-<div class="main" id="about" style="margin-top:25px;text-align:center;">
-<h1><p3 style="color:#AF164E!important;">ABOUT </p3>US</h1>
-<p>Based in Bloemfontein, we specialize in providing high-quality printing services for a wide range of needs.<br><br>Whether you're looking to promote your business or organization, create custom t-shirts for an event or team, or print personalized calendars and posters for your home, we've got your back.</p>
-</div>
-<div class="main" id="services" style="text-align:center!important;">
-<h1 style="text-align:center!important;color:#000;">WHAT WE <p3 style="color:#AF164E!important;">OFFER</p3>
-<br><p3 style="color:#27628D!important;font-weight:normal!important;margin: 15px;">☟</p3></h1>
-<div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Perfect for businesses, sports teams, schools, or anyone looking for custom t-shirts.<br><br>Whether you need a small batch of t-shirts for your team or a large order for your business, leave it to us.</p></div>
-<br><div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Custom Printed Caps | BloemPrint" href="/" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Promotional caps, being highly visible, attract attention and are excellent for marketing your brand or product.<br><br>Whether you need a single cap or a bulk order, we cater to your needs.</p></div>
-<br><div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>Flyers</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="flyers.png" alt="Custom Flyer Printing | BloemPrint" href="" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Flyers are a great way to promote your business or event.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect flyer for your needs.</p></div>
-<br><div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>Posters</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="posters.png" alt="Custom Poster Printing | BloemPrint" href="/" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Whether you're promoting an event, advertising a product, or just looking to decorate your space, we can help.<br><br>We offer a variety of poster sizes and printing options to help you create the perfect design for your needs.</p></div>
-<br><div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>Stickers</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="stickers.png" alt="Custom Sticker Printing | BloemPrint" href="/" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Stickers are a great way to promote your brand or add a personal touch to your products or packaging.<br><br>We offer a range of sticker sizes and shapes, and we can print your design using high-quality printable vinyl or sticker paper.</p></div>
-<br><div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>Business Cards</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="cards.png" alt="Business Card Printing | BloemPrint" href="/" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Your business card is often the first impression that potential clients or customers will have of your business, so it's important to make it count.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect business card for your needs.</p></div>
-<br><div style="font-size:24px;color:#ED0D63;margin-left:;display:inline!important;text-align:center!important;"><p2>Calendars</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="calendars.png" alt="Custom Calendar Printing | BloemPrint" href="/" width="80%" height="auto" style="border: 0 solid #27628D;"><p>Custom calendars are a great way to stay organized and keep your schedule on track.<br><br>We offer personalized calendars that feature your own photos and designs.</p></div>
-<br><div style="margin-top:15px;margin-bottom:30px;"><a aria-label="Get A Quote" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20">
-  <img class="center" alt="Get A Quote" src="gaq.svg" height="45" class="center"></a><p style="margin:27.5px;"><a id="rc" href="https://bloemprint.co.za/price-list" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
-<div class="main" id="contact" style="text-align:center;">
-<h1>GET <p3 style="color:#AF164E!important;">IN TOUCH </p3></h1>
-<p>Contact us today to learn more about our services and how we can help you bring your vision to life.</p>
-<p style="margin:27.5px;"><a id="rc" href="tel:+27717080618" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;+27 71 708 0618&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a id="rc" href="mailto:info@bloemprint.co.za" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;info@bloemprint.co.za&nbsp;&nbsp;&nbsp;</a></p>
-<a aria-label="Chat on WhatsApp" href="https://wa.me/27717080618" style="display:;text-align:center!important;margin:0!important;">
-  <img class="center" alt="Chat on WhatsApp" src="whatsappbuttonwhitelarge.svg" width="190" class="center"></a>
-<!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
 
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+</body>
+</html>
 
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "103167812818897");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v17.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-<div style="padding-top: 2rem;">
-    <div class="widget-container">
-        <iframe src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Posts from Instagram"></iframe>
-        <div class="overlay"></div>
-    </div>
-</div>
-<footer style="padding-top:10px;text-align:left!important;">
-<div class="announcement" style="margin-top:35px!important;margin-bottom:5px!important;"><p style="color:#fff!important;background:#27628D;font-weight:400!important;font-size:15px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin:0!important;padding-top:5px;"><marquee>R90 delivery fee for orders in Bloemfontein and R150 for all other areas in South Africa.</marquee></p></div>
-<div style="margin-top:30px;margin-bottom:25px;text-align:center!important;"><a href="/"><img class="center" src="BPLogo.svg" href="/" alt="" width="120px" height="auto"></a></div>
-<p style="text-align:center!important;">We're always ready to help you with any questions or concerns you may have, and we work hard to ensure that every project is completed on time and to your satisfaction.</p>
-<p style="text-align:center!important;">Mon - Fri: 08:00 - 17:00</p><p style="text-align:center!important;">Sat: 08:00 - 12:00</p><p style="text-align:center!important;">Sun & Public Holidays: Closed</p>
-<p style="text-align:;"><a href="/" onclick="closeNav()" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;display:;">Home</a><br><a href="javascript:setTimeout(()=>{window.location = '#about' },500);" onclick="closeNav()" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">About</a><br><a href="javascript:setTimeout(()=>{window.location = '#services' },500);" onclick="closeNav()" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">Services</a><br><a href="javascript:setTimeout(()=>{window.location = '#contact' },500);" onclick="closeNav()" style="color:#ED0D63!important;text-align:left!important;line-height:2.1;text-decoration:none!important;display:;">Contact</a></p>
-<p>Find us on:</p>
-<p><a href="https://www.instagram.com/bloemprint" style="color:#ED0D63;"><i class="fa fa-instagram" style="font-size:25px;"></i></a><a href="https://www.facebook.com/profile.php?id=100093587892651" style="color:#ED0D63;display:;"><i class="fa fa-facebook" style="font-size:25px;display:;"></i></a><a href="https://wa.me/c/27717080618" style="color:#ED0D63;display:;"><i class="fa fa-whatsapp" style="font-size:25px;display:;"></i></a></p>
-<p style="line-height:2.1;">Copyright © 2024 BloemPrint. All rights reserved.</p>
-</footer></body></html>
