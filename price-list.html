@@ -377,6 +377,36 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+/* Container for the widget */
+.widget-container {
+    position: relative;
+    width: 100%;
+    max-width: 765px; /* Maximum width of the widget */
+    margin: 0 auto; /* Center the widget */
+    padding-top: 66.67%; /* Aspect ratio for 765x510 (765/510 ≈ 1.5) */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Ensure the iframe is responsive */
+.widget-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ensure overlay fits container */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+    pointer-events: none; /* Allow clicks to pass through */
+  }
 </script>
 <div class="announcement" style="margin-top:15px!important;"><p style="color:#fff!important;background:#27628D;font-weight:400!important;font-size:15px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin: 0 !important;padding-top:5px;"><marquee>Nationwide delivery — door-to-door courier or via PAXI.</marquee></p></div>
 <div class="main" id="price-list" style="margin-top:25px;margin-bottom:10px;text-align:center;">
@@ -715,6 +745,25 @@ function closeNav() {
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+<div style="padding-top: 2rem; position: relative;">
+    <!-- Heading -->
+    <h2 style="text-align: center; margin: 0 0 1rem 0;font-weight: 500!important;font-size: 24px!important;letter-spacing: 1px!important;">Follow <span class="highlight">@bloemprint</span></h2>
+    
+    <!-- The clickable link -->
+    <a href="https://www.instagram.com/bloemprint" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: block; pointer-events: all;">
+        <!-- Invisible link area -->
+    </a>
+    
+    <!-- Widget container -->
+    <div class="widget-container" style="position: relative; z-index: 1; overflow: hidden;">
+        <iframe src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Posts from Instagram"></iframe>
+        
+        <!-- Gradient overlay for more pronounced fading effect -->
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%); pointer-events: none; z-index: 20;"></div>
+        
+        <div class="overlay"></div>
+    </div>
+</div>
 <footer style="padding-top:10px;text-align:left!important;">
 <div class="announcement" style="margin-top:35px!important;margin-bottom:5px!important;"><p style="color:#fff!important;background:#27628D;font-weight:400!important;font-size:15px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin:0!important;padding-top:5px;"><marquee>R90 delivery fee for orders in Bloemfontein and R150 for all other areas in South Africa.</marquee></p></div>
 <div style="margin-top:30px;margin-bottom:25px;text-align:center!important;"><a href="/"><img class="center" src="BPLogo.svg" href="/" alt="" width="120px" height="auto"></a></div>
