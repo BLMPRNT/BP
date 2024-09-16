@@ -381,7 +381,6 @@ input[type=submit]:active {
   opacity: 1;
   background: #fff !important;
 }
-/* Ensure consistent font size for error messages */
 #mce-error-response {
   font-family: 'Poppins', sans-serif !important; /* Apply font family */
   font-size: 12px !important; /* Force font size to 14px */
@@ -390,8 +389,6 @@ input[type=submit]:active {
   margin: 5px !important; /* Margin around message */
   display: block !important; /* Ensure block display */
 }
-
-/* Ensure consistent font size for success messages */
 #mce-success-response {
   font-family: 'Poppins', sans-serif !important;
   font-size: 12px !important; /* Match error message size */
@@ -417,7 +414,6 @@ input[type=submit]:active {
   height: 0;
   font-size: 14px !important;
 }
-/* Container for the widget */
 .widget-container {
     position: relative;
     width: 100%;
@@ -426,8 +422,6 @@ input[type=submit]:active {
     padding-top: 66.67%; /* Aspect ratio for 765x510 (765/510 ≈ 1.5) */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-
-/* Ensure the iframe is responsive */
 .widget-container iframe {
     position: absolute;
     top: 0;
@@ -436,8 +430,6 @@ input[type=submit]:active {
     height: 100%;
     border: none;
 }
-
-/* Ensure overlay fits container */
 .overlay {
     position: absolute;
     top: 0;
@@ -582,8 +574,7 @@ function closeNav() {
       <div class="response" id="mce-error-response" style="font-size:12px!important;display:none;"></div>
       <div class="response" id="mce-success-response" style="font-size:12px!important;display:none;"></div>
     </div>
-    
-    <!-- Hidden field for bots -->
+
     <div style="position: absolute; left: -5000px;" aria-hidden="true">
       <input type="text" name="b_dae815aeed61a31529326ba57_1bebc93314" tabindex="-1" value="">
     </div>
@@ -600,20 +591,12 @@ function closeNav() {
 </div>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>	
 <div style="display:none!important;padding-top: 2rem; position: relative;">
-    <!-- Heading -->
     <h2 style="text-align: center; margin: 0 0 1rem 0;font-weight:;font-size: 24px!important;letter-spacing: 1px!important;">Follow <span class="highlight">@bloemprint</span></h2>
-    
-    <!-- The clickable link -->
     <a href="https://www.instagram.com/bloemprint" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: block; pointer-events: all;">
-        <!-- Invisible link area -->
     </a>
-    
-    <!-- Widget container -->
     <div class="widget-container" style="position: relative; z-index: 1; overflow: hidden;">
         <iframe src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Posts from Instagram"></iframe>
-        
-        <!-- Gradient overlay for more pronounced fading effect -->
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%); pointer-events: none; z-index: 20;"></div>
+       <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 1) 100%); pointer-events: none; z-index: 20;"></div>
         
         <div class="overlay"></div>
     </div>
