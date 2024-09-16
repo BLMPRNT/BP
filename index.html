@@ -381,21 +381,24 @@ input[type=submit]:active {
   opacity: 1;
   background: #fff !important;
 }
+/* Ensure consistent font size for error messages */
 #mce-error-response {
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px !important; /* Force the font size */
-  color: #ED1B24; /* Error color, if needed */
-  text-align: center;
-  margin: 10px;
-  display: block;
+  font-family: 'Poppins', sans-serif !important; /* Apply font family */
+  font-size: 14px !important; /* Force font size to 14px */
+  color: #ED1B24 !important; /* Error message color */
+  text-align: center !important; /* Center text */
+  margin: 10px !important; /* Margin around message */
+  display: block !important; /* Ensure block display */
 }
+
+/* Ensure consistent font size for success messages */
 #mce-success-response {
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px; /* Ensure this matches the error message size */
-  color: #688868; /* Success color */
-  text-align: center;
-  margin: 10px;
-  display: block;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 14px !important; /* Match error message size */
+  color: #688868 !important; /* Success message color */
+  text-align: center !important;
+  margin: 10px !important;
+  display: block !important;
 }
 #rc {
   border-radius: 50px;
