@@ -323,70 +323,64 @@ display: block;
   line-height: 1.4 !important;
   border-bottom: 0px solid #ddd;
 }
-.form {
-	margin-bottom: 20px;
-	text-align: center !important;
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0; /* Optional: Add padding if needed */
 }
 
+form {
+  max-width: 275px;
+}
 .form__email {
-	padding:11px;
-	border-radius: 0px;
- 	border: 1px solid #D06FBC;
-	width:260px;
-	height:;
-	font-weight: normal !important;
-	color: #000 !important;
+  padding: 11px;
+  border-radius: 0px;
+  border: 1px solid #D06FBC;
+  width: 260px;
+  font-weight: normal !important;
+  color: #000 !important;
 }
+
 .form__email:focus {
-	border: 1px solid #9E1A50;
-	outline: 0px solid #9E1A50 !important;
-        outline-color: #9E1A50 !important;
+  border: 1px solid #9E1A50;
+  outline: 0px solid #9E1A50 !important;
+  outline-color: #9E1A50 !important;
 }
+
 .form__button {
   border-radius: 50px;
   border: 1.5px solid #9E1A50;
   background: #9E1A50;
-  padding: 10px 20px 10px 20px;
-  width:;
-  height: 0;
+  padding: 10px 20px;
   font-size: 14px !important;
   color: #fff;
 }
-input[type=text], input[type=submit]:hover {
-	box-shadow: 0 10px 20px rgba(255, 255, 255, 0);
-}
+
 input[type=submit] {
   border-radius: 50px;
   border: 1.5px solid #9E1A50;
   background: #9E1A50;
-  padding: 10px 20px 10px 20px;
-  width:;
-  height: 0;
+  padding: 10px 20px;
   font-size: 14px !important;
   color: #fff;
 }
-input[type=submit]:focus {
-  color: #fff;
-  background: #9E1A50;
-}
-input[type=submit]:link {
-  color: #fff;
-  background: #9E1A50;
-}
-input[type=submit]:visited {
+
+input[type=submit]:focus,
+input[type=submit]:link,
+input[type=submit]:visited,
+input[type=submit]:hover,
+input[type=submit]:active {
   color: #fff;
   background: #9E1A50;
   text-decoration: none;
 }
-input[type=submit]:hover {
-  color: #fff;
-  background: #9E1A50;
-  text-decoration: none;
-}
-  input[type=submit]:active {
-  color: #fff;
-  background: #9E1A50;
-  text-decoration: none;
+
+::placeholder {
+  color: #D06FBC;
+  opacity: 1;
+  background: #fff !important;
 }
 #rc {
   border-radius: 50px;
@@ -404,21 +398,6 @@ input[type=submit]:hover {
   width:;
   height: 0;
   font-size: 14px !important;
-}
-button {
-  border-radius: 50px;
-  border: 1.5px solid #9E1A50;
-  background: #9E1A50;
-  padding: 10px 20px 10px 20px;
-  width:;
-  height: 0;
-  font-size: 14px !important;
-  color: #fff;
-}
-::placeholder {
-  color: #D06FBC;
-  opacity: 1;
-  background: #fff !important;
 }
 /* Container for the widget */
 .widget-container {
@@ -552,52 +531,54 @@ function closeNav() {
 <div style="padding:0.5rem;text-align:center;">
   <p2 style="text-align:center;">Become a Bloemer</p2>
   <p>Subscribe to our newsletter for exclusive resources, tips and expert advice - on the house!</p>
-<form
-  action="https://felon.us12.list-manage.com/subscribe/post?u=dae815aeed61a31529326ba57&amp;id=1bebc93314&amp;f_id=008653e0f0"
-  method="post"
-  id="mc-embedded-subscribe-form"
-  name="mc-embedded-subscribe-form"
-  style="max-width:275px!important; padding: 1rem 0;"
-  class="validate"
-  target="_blank"
-  novalidate>
-  
-  <div id="mc_embed_signup_scroll" style="margin:0;padding:0;">
-    <div class="mc-field-group" style="margin:0;padding:0;">
-      <input
-        type="email"
-        pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
-        class="form__email required email"
-        placeholder="Your email address"
-        style="background:#fff!important;font-family:'Poppins', sans-serif;font-weight:normal!important;color:#ED1B24;text-transform:none!important;font-size:16.5px;letter-spacing:0px;"
-        value=""
-        name="EMAIL"
-        id="mce-EMAIL"
-        required>
-      <div>
-        <span id="mce-EMAIL-HELPERTEXT" class="helper_text" style="font-family:'Poppins', sans-serif;font-size:14px!important;margin:10px!important;text-align:center!important;"></span>
+<div class="form-container">
+  <form
+    action="https://felon.us12.list-manage.com/subscribe/post?u=dae815aeed61a31529326ba57&amp;id=1bebc93314&amp;f_id=008653e0f0"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    style="max-width:275px!important; padding: 1rem 0;"
+    class="validate"
+    target="_blank"
+    novalidate>
+    
+    <div id="mc_embed_signup_scroll" style="margin:0;padding:0;">
+      <div class="mc-field-group" style="margin:0;padding:0;">
+        <input
+          type="email"
+          pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+          class="form__email required email"
+          placeholder="Your email address"
+          style="background:#fff!important;font-family:'Poppins', sans-serif;font-weight:normal!important;color:#ED1B24;text-transform:none!important;font-size:16.5px;letter-spacing:0px;"
+          value=""
+          name="EMAIL"
+          id="mce-EMAIL"
+          required>
+        <div>
+          <span id="mce-EMAIL-HELPERTEXT" class="helper_text" style="font-family:'Poppins', sans-serif;font-size:14px!important;margin:10px!important;text-align:center!important;"></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="mce-responses" class="clear foot" style="font-family:'Poppins', sans-serif;font-size:14px!important;margin:10px!important;text-align:center!important;">
-    <div class="response" id="mce-error-response" style="display:none;margin:10px!important;text-align:center!important;"></div>
-    <div class="response" id="mce-success-response" style="display:none;color:#DE3919;margin:10px!important;text-align:center!important;"></div>
-  </div>
-  
-  <!-- Hidden field for bots -->
-  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-    <input type="text" name="b_dae815aeed61a31529326ba57_1bebc93314" tabindex="-1" value="">
-  </div>
-  
-  <input
-    type="submit"
-    value="Subscribe"
-    style="border-radius: 50px; border: 1.5px solid #9E1A50; background: #9E1A50; padding: 10px 25px; font-size: 14px !important; color: #fff; font-family: 'Poppins', sans-serif; cursor: pointer; text-align: center; display: inline-block; width: auto; height: auto;"
-    name="subscribe"
-    id="mc-embedded-subscribe"
-    class="button">
-</form>
+    <div id="mce-responses" class="clear foot" style="font-family:'Poppins', sans-serif;font-size:14px!important;margin:10px!important;text-align:center!important;">
+      <div class="response" id="mce-error-response" style="display:none;margin:10px!important;text-align:center!important;"></div>
+      <div class="response" id="mce-success-response" style="display:none;color:#DE3919;margin:10px!important;text-align:center!important;"></div>
+    </div>
+    
+    <!-- Hidden field for bots -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_dae815aeed61a31529326ba57_1bebc93314" tabindex="-1" value="">
+    </div>
+    
+    <input
+      type="submit"
+      value="Subscribe"
+      style="border-radius: 50px; border: 1.5px solid #9E1A50; background: #9E1A50; padding: 10px 25px; font-size: 14px !important; color: #fff; font-family: 'Poppins', sans-serif; cursor: pointer; text-align: center; display: inline-block; width: auto; height: auto;"
+      name="subscribe"
+      id="mc-embedded-subscribe"
+      class="button">
+  </form>
+</div>
 </div>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>	
 <div style="display:none!important;padding-top: 2rem; position: relative;">
