@@ -345,6 +345,81 @@ display: block;
   line-height: 1.4 !important;
   border-bottom: 0px solid #ddd;
 }
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* Optional: Add padding if needed */
+}
+
+form {
+  max-width: 295px;
+}
+.form__email {
+  padding: 11px 16px;
+  border-radius: 50px;
+  border: 0px solid #D06FBC;
+  width: 255px;
+  font-weight: normal !important;
+  color: #000 !important;
+  text-align: center !important;
+}
+
+.form__email:focus {
+  border: 1.5px solid #487048;
+  outline: 0px solid #487048 !important;
+  outline-color: #487048 !important;
+}
+
+.form__button {
+  border-radius: 50px;
+  border: 1.5px solid #9E1A50;
+  background: #9E1A50;
+  padding: 10px 20px;
+  font-size: 14px !important;
+  color: #fff;
+}
+
+input[type=submit] {
+  border-radius: 50px;
+  border: 1.5px solid #9E1A50;
+  background: #9E1A50;
+  padding: 10px 20px;
+  font-size: 14px !important;
+  color: #fff;
+}
+
+input[type=submit]:focus,
+input[type=submit]:link,
+input[type=submit]:visited,
+input[type=submit]:hover,
+input[type=submit]:active {
+  color: #fff;
+  background: #9E1A50;
+  text-decoration: none;
+}
+::placeholder {
+  color: #487048;
+  opacity: 1;
+  background: #fff !important;
+}
+#mce-error-response {
+  font-family: 'Poppins', sans-serif !important; /* Apply font family */
+  font-size: 12px !important; /* Force font size to 14px */
+  color: #ED1B24 !important; /* Error message color */
+  text-align: center !important; /* Center text */
+  margin: 5px !important; /* Margin around message */
+  display: block !important; /* Ensure block display */
+}
+#mce-success-response {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 12px !important; /* Match error message size */
+  color: #688868 !important; /* Success message color */
+  text-align: center !important;
+  margin: 5px !important;
+  display: block !important;
+}
 #rc {
   border-radius: 50px;
   border: 1.5px solid #D06FBC;
