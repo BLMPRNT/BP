@@ -24,6 +24,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.loading {
+            cursor: wait;
+}
 .header {
      vertical-align: middle;
 }
@@ -607,4 +610,23 @@ function closeNav() {
 <p>Find us on:</p>
 <p><a href="https://www.instagram.com/bloemprint" style="color:#D06FBC;"><i class="fa fa-instagram" style="font-size:25px;"></i></a><a href="https://www.facebook.com/profile.php?id=100093587892651" style="color:#D06FBC;display:;"><i class="fa fa-facebook" style="font-size:25px;display:;"></i></a><a href="https://wa.me/c/27717080618" style="color:#D06FBC;display:;"><i class="fa fa-whatsapp" style="font-size:25px;display:;"></i></a></p>
 <p style="line-height:2.1;">Copyright © 2024 BloemPrint. All rights reserved.</p></div>
-</footer></body></html>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const delay = 1000; // 1 second in milliseconds
+
+            document.querySelectorAll('.delayed-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+
+                    // Optional: Add a class to indicate loading state
+                    this.classList.add('loading');
+
+                    setTimeout(() => {
+                        window.location.href = this.href; // Redirect after delay
+                    }, delay);
+                });
+            });
+        });
+</script>
+</body></html>
