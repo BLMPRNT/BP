@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap-image/1.1 http://www.sitemaps.org/schemas/sitemap-image/1.1/sitemap-image.xsd">
-  <url>
-    <loc>https://bloemprint.co.za/about</loc>
-    <lastmod>2024-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bloemprint.co.za/services</loc>
-    <lastmod>2024-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://bloemprint.co.za/contact</loc>
-    <lastmod>2024-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+    <xsl:output method="html" indent="yes" encoding="UTF-8"/>
+
+    <xsl:template match="/">
+        <html>
+            <head>
+                <title>Sitemap</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #E7D4E7;
+                        color: #094610;
+                    }
+                    h1 {
+                        color: #9E1A50;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    th {
+                        background-color: #D06FBC;
+                        color: white;
+                        padding: 10px;
+                    }
+                    td {
+                        border: 1px solid #A8B8A8;
+                        padding: 10px;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Sitemap</h1>
+                <table>
+                    <tr>
+                        <th>Location</th>
+                        <th>Last Modified</th>
+                        <th>Change Frequency</th>
+                        <th>Priority</th>
+                    </tr>
+                    <xsl:for-each select="urlset/url">
+                        <tr>
+                            <td><xsl:value-of select="loc"/></td>
+                            <td><xsl:value-of select="lastmod"/></td>
+                            <td><xsl:value-of select="changefreq"/></td>
+                            <td><xsl:value-of select="priority"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
