@@ -421,6 +421,13 @@ input[type=submit]:active {
   height: 0;
   font-size: 14px !important;
 }
+#rb {
+  border-radius: 50px;
+  border: 1.5px solid #094610;
+  background:#fff!important;
+  padding: 10px 15px;
+  text-align: left;
+}
 .widget-container {
     position: relative;
     width: 100%;
@@ -518,12 +525,14 @@ function closeNav() {
       id="contact-form"
       enctype="multipart/form-data">
       <input
+        class="rb"
         type="text"
         name="fi-sender-fullName"
         placeholder="Your Name"
         required
         style="border-radius: 50px; border: 1.5px solid #094610;background:#fff!important; font-family:'Poppins', sans-serif; font-weight:normal!important; color:#333; text-transform:none!important; font-size:16.5px; letter-spacing:0px; text-align:left; padding:10px 15px; border:1px solid #ddd; border-radius:0; width:100%; box-sizing:border-box;">
       <input
+        class="rb"
         type="email"
         name="fi-sender-email"
         placeholder="Your Email"
@@ -531,11 +540,13 @@ function closeNav() {
         required
         style="border-radius: 50px; border: 1.5px solid #094610;background:#fff!important; font-family:'Poppins', sans-serif; font-weight:normal!important; color:#333; text-transform:none!important; font-size:16.5px; letter-spacing:0px; text-align:left; padding:10px 15px; border:1px solid #ddd; border-radius:0; width:100%; box-sizing:border-box;">
       <input
+        class="rb"
         type="tel"
         name="fi-sender-phone"
         placeholder="Your Phone No."
         style="border-radius: 50px; border: 1.5px solid #094610;background:#fff!important; font-family:'Poppins', sans-serif; font-weight:normal!important; color:#333; text-transform:none!important; font-size:16.5px; letter-spacing:0px; text-align:left; padding:10px 15px; border:1px solid #ddd; border-radius:0; width:100%; box-sizing:border-box;">
       <textarea
+        class="rb"
         name="fi-text-message"
         placeholder="Your Message"
         rows="5"
