@@ -435,6 +435,27 @@ input[type=submit]:active {
   height: 0;
   font-size: 13px !important;
 }
+table {
+  font-family: 'Poppins', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+  text-align: center !important;
+  background: #F0E0E8 !important;
+  border-radius: 25px;
+  border: 0 solid #F0E0E8;
+}
+td, th {
+  border: 1px solid #ffffff;
+  color: #094610 !important;
+  text-align: center;
+  padding: 9px 8px;
+  font-size: 12px;
+}
+@keyframes popIn {
+  from { transform:scale(0.9); opacity:0; }
+  to { transform:scale(1); opacity:1; }
+}
 .widget-container {
     position: relative;
     width: 100%;
@@ -509,6 +530,63 @@ function closeNav() {
 <h1 style="text-align:center!important;color:#000;">WHAT WE <p3 style="color:#9E1A50!important;">OFFER</p3></h1>
 <div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Perfect for businesses, sports teams, schools, or anyone looking for custom t-shirts.<br><br>Whether you need a small batch of t-shirts for your team or a large order for your business, leave it to us.</p></div>
+<!-- Trigger Button -->
+<button id="openTableBtn" style="font-weight:400!important; border-radius: 50px; border: 1.5px solid #094610; background: #094610; padding: 10px 25px; font-size: 14px !important; color: #F0E0E8; font-family: 'Poppins', sans-serif; cursor: pointer; letter-spacing: 1px;">
+  See Prices
+</button>
+
+<!-- Modal Overlay + Table -->
+<div id="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px;">
+  
+  <div style="position:relative; max-width:600px; width:100%; max-height:90vh; overflow:auto; animation:popIn 0.2s ease;">
+    
+    <!-- Close Button -->
+    <button id="closeTableBtn" style="position:absolute; top:-12px; right:-12px; z-index:10; width:32px; height:32px; border-radius:50%; border:none; background:#094610; color:#F0E0E8; font-size:18px; line-height:32px; cursor:pointer; font-family:'Poppins', sans-serif;">×</button>
+    
+    <!-- Your Table -->
+
+<table>
+<tr>
+    <td>Sizes</td>
+    <td>Solid Colour Print</td>
+    <td>Full Colour Print</td>
+</tr>
+<tr>
+    <td>Pocket (100 x 100 mm)</td>
+    <td>R59</td>
+    <td>R79</td>
+  </tr>
+  <tr>
+    <td>A4 (210 x 297 mm)</td>
+    <td>R89</td>
+    <td>R119</td>
+  </tr></table>
+  <table><tr>
+    <td style="background:#fff!important;font-style:italic;"></td>
+    <td style="background:#fff!important;font-style:italic;"></td>
+    <td style="background:#fff!important;font-style:italic;"></td>
+    <td style="background:#fff!important;font-style:italic;"></td>
+  </tr>
+  </table>
+<table>
+<td style="font-style:italic;">Regular T-Shirt (S, M, L, XL, XXL)</td></td>
+    <td>R100</td>
+  </tr>
+  <tr>
+<td style="font-style:italic;">Golf Shirt (S, M, L, XL, XXL)</td>
+    <td>R140</td>
+  </tr>
+</table>
+  </div>
+</div>
+
+<script>
+const modal = document.getElementById('tableModal');
+document.getElementById('openTableBtn').onclick = () => modal.style.display = 'flex';
+document.getElementById('closeTableBtn').onclick = () => modal.style.display = 'none';
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; } // close on overlay click
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style.display = 'none'; }) // ESC to close
+</script>
 <br><div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Custom Printed Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Promotional caps, being highly visible, attract attention and are excellent for marketing your brand or product.<br><br>Whether you need a single cap or a bulk order, we cater to your needs.</p></div>
 <br><div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Flyers</p2>✓</div>
