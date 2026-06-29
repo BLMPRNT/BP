@@ -597,6 +597,57 @@ document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style
 </script>
 <br><div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Custom Printed Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Promotional caps, being highly visible, attract attention and are excellent for marketing your brand or product.<br><br>Whether you need a single cap or a bulk order, we cater to your needs.</p></div>
+<!-- Trigger Button -->
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="openTableBtn" class="" style="color:#D06FBC !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #D06FBC; padding: 10px; width:; height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+
+<!-- Modal Overlay + Table -->
+<div id="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background: #fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px;">
+  
+  <div style="position:relative; max-width:; width:100%; max-height:; overflow: overlay; animation:popIn .5s ease;">
+
+    <!-- Your Table -->
+<div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<table>
+<tr>
+    <td>Sizes</td>
+    <td>Solid Colour Print</td>
+    <td>Full Colour Print</td>
+</tr>
+<tr>
+    <td>Standard (100 x 100 mm)</td>
+    <td>R59</td>
+    <td>R79</td>
+  </tr>
+  </table>
+  <table><tr>
+    <td style="background:#fff!important;font-style:italic;"></td>
+    <td style="background:#fff!important;font-style:italic;"></td>
+    <td style="background:#fff!important;font-style:italic;"></td>
+    <td style="background:#fff!important;font-style:italic;"></td>
+  </tr>
+  </table>
+  <table>
+    <td style="font-style:italic;">Baseball Cap (One-Size-Fits-All)</td>
+    <td>R100</td>
+  </tr>
+  <tr>
+    <td style="font-style:italic;">Trucker Cap (One-Size-Fits-All)</td>
+    <td>R100</td>
+  </tr>
+</table>
+
+<!-- Close Button -->
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="closeTableBtn" class="" style="color:#D06FBC !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #D06FBC; padding: 10px; width:; height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Go Back&nbsp;&nbsp;&nbsp;</a></p></div>
+  </div>
+</div>
+<script>
+const modal = document.getElementById('tableModal');
+document.getElementById('openTableBtn').onclick = () => modal.style.display = 'flex';
+document.getElementById('closeTableBtn').onclick = () => modal.style.display = 'none';
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; } // close on overlay click
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style.display = 'none'; }) // ESC to close
+</script>
 <br><div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Flyers</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="flyers.png" alt="Custom Flyer Printing | BloemPrint" href="" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Flyers are a great way to promote your business or event.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect flyer for your needs.</p></div>
 <br><div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Posters</p2>✓</div>
