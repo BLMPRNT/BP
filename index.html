@@ -489,9 +489,38 @@ document.addEventListener('keydown', function(e) {
         });
     }
 });
+
 @keyframes popIn {
-  from { transform:scale(0.9); opacity:0; }
-  to { transform:scale(1); opacity:1; }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.tableContent {
+  animation: popIn .3s ease forwards;
+}
+
+.tableContent.closing {
+  animation: popOut .25s ease forwards;
 }
 
 .widget-container {
@@ -574,8 +603,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">
     
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+  <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+        
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -626,8 +655,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">
   
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+  <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+        
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -675,8 +704,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">  
   
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+  <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+        
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -727,8 +756,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">
   
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+  <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+        
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -779,8 +808,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">
   
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+  <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+        
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -831,8 +860,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">
   
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+  <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+            
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -883,8 +912,8 @@ function closeNav() {
 <!-- Modal Overlay + Table -->
 <div class="tableModal" style="display:none; position:fixed; inset:0; z-index:9999; background:#fff; backdrop-filter:blur(2px); justify-content:center; align-items:center; padding:20px; overflow-y:scroll; -webkit-overflow-scrolling:touch;">
   
-  <div style="position:relative; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; animation:popIn .5s ease;">
-    
+      <div class="tableContent" style="position:relative; width:100%; max-height:90vh; overflow-y:auto;">
+        
     <!-- Your Table -->
 <div style="font-size:24px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
@@ -1138,5 +1167,53 @@ document.addEventListener('keydown', function(e) {
                 });
             });
         });
+</script>
+<script>
+document.querySelectorAll('.openTableBtn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const modal = this.closest('div').nextElementSibling;
+        const content = modal.querySelector('.tableContent');
+
+        modal.style.display = 'flex';
+        content.classList.remove('closing');
+
+        // Restart animation each time
+        content.style.animation = 'none';
+        content.offsetHeight;
+        content.style.animation = '';
+    });
+});
+
+document.querySelectorAll('.closeTableBtn').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+});
+
+document.querySelectorAll('.tableModal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal.call(modal.querySelector('.closeTableBtn'));
+    });
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.tableModal').forEach(modal => {
+            if (modal.style.display === 'flex') {
+                closeModal.call(modal.querySelector('.closeTableBtn'));
+            }
+        });
+    }
+});
+
+function closeModal() {
+    const modal = this.closest('.tableModal');
+    const content = modal.querySelector('.tableContent');
+
+    content.classList.add('closing');
+
+    setTimeout(() => {
+        modal.style.display = 'none';
+        content.classList.remove('closing');
+    }, 250);
+}
 </script>
 </body></html>
