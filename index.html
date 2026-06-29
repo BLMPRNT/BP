@@ -465,6 +465,10 @@ td, th {
   from { transform:scale(0.9); opacity:0; }
   to { transform:scale(1); opacity:1; }
 }
+@keyframes popOut {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.9); opacity: 0; }
+}
 .widget-container {
     position: relative;
     width: 100%;
@@ -587,8 +591,9 @@ function closeNav() {
 <!-- Close Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="closeTableBtn" class="" style="color:#D06FBC !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #D06FBC; padding: 10px; width:; height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Go Back&nbsp;&nbsp;&nbsp;</a></p></div>
   </div>
+<div style="position:relative; max-width:; width:100%; max-height:; overflow:hidden; animation:popOut 1s ease;">
 </div>
-
+<div style="position:relative; max-width:; width:100%; max-height:; overflow:hidden; animation:popOut 1s ease;">
 <script>
 const modal = document.getElementById('tableModal');
 document.getElementById('openTableBtn').onclick = () => modal.style.display = 'flex';
