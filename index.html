@@ -588,13 +588,7 @@ function closeNav() {
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="closeTableBtn" class="" style="color:#D06FBC !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #D06FBC; padding: 10px; width:; height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Go Back&nbsp;&nbsp;&nbsp;</a></p></div>
   </div>
 </div>
-<script>
-const modal = document.getElementById('tableModal');
-document.getElementById('openTableBtn').onclick = () => modal.style.display = 'flex';
-document.getElementById('closeTableBtn').onclick = () => modal.style.display = 'none';
-modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; } // close on overlay click
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style.display = 'none'; }) // ESC to close
-</script>
+
 <br><div style="font-size:22px;color:#D06FBC;margin-left:;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
 <div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Custom Printed Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Promotional caps, being highly visible, attract attention and are excellent for marketing your brand or product.<br><br>Whether you need a single cap or a bulk order, we cater to your needs.</p></div>
 <!-- Trigger Button -->
@@ -901,7 +895,13 @@ document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="closeTableBtn" class="" style="color:#D06FBC !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #D06FBC; padding: 10px; width:; height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Go Back&nbsp;&nbsp;&nbsp;</a></p></div>
   </div>
 </div>
-
+<script>
+const modal = document.getElementById('tableModal');
+document.getElementById('openTableBtn').onclick = () => modal.style.display = 'flex';
+document.getElementById('closeTableBtn').onclick = () => modal.style.display = 'none';
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; } // close on overlay click
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style.display = 'none'; }) // ESC to close
+</script>
 <br><div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a id="rc" href="https://bloemprint.co.za/price-list" class="delayed-link" style="color:#D06FBC!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 <div class="main" id="contact" style="text-align:center;">
 <h1>GET <p3 style="color:#9E1A50!important;">IN TOUCH </p3></h1>
