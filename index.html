@@ -926,11 +926,33 @@ function closeNav() {
   </div>
 </div>
 <script>
-const modal = document.getElementById('tableModal');
-document.getElementById('openTableBtn').onclick = () => modal.style.display = 'flex';
-document.getElementById('closeTableBtn').onclick = () => modal.style.display = 'none';
-modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; } // close on overlay click
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') modal.style.display = 'none'; }) // ESC to close
+document.querySelectorAll('.openTableBtn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.closest('div').nextElementSibling.style.display = 'flex';
+    });
+});
+
+document.querySelectorAll('.closeTableBtn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.closest('.tableModal').style.display = 'none';
+    });
+});
+
+document.querySelectorAll('.tableModal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.tableModal').forEach(modal => {
+            modal.style.display = 'none';
+        });
+    }
+});
 </script>
 <br><div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a id="rc" href="https://bloemprint.co.za/price-list" class="delayed-link" style="color:#D06FBC!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 <div class="main" id="contact" style="text-align:center;">
