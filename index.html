@@ -474,7 +474,9 @@ input[type=submit]:active {
   font-size: 13px !important;
 }
 .tableModal {
-  animation: popIn .3s ease forwards;
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 table {
   font-family: 'Poppins', sans-serif;
@@ -551,7 +553,7 @@ document.addEventListener('keydown', function(e) {
   animation: popIn .3s ease forwards;
 }
 
-.tableModal.closing {
+.tableContent.closing {
   animation: popOut .25s ease forwards;
 }
 
