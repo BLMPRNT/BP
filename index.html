@@ -503,33 +503,77 @@ td, th {
   padding: 9px 8px;
   font-size: 12px;
 }
+
+// 1. When any .openTableBtn is clicked
 document.querySelectorAll('.openTableBtn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const modal = this.closest('div').nextElementSibling;
-        modal.style.display = 'flex';
+    btn.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        
+        // Get which modal to open
+        const targetModalId = this.getAttribute('data-target'); 
+        
+        // Get the section ID the button is inside. Add id="menu" to your section
+        const section = this.closest('section');
+        const sectionId = section ? section.id : 'home';
+        
+        // Save both so home page knows what to do
+        localStorage.setItem('openModalOnLoad', targetModalId);
+        localStorage.setItem('scrollToSectionOnLoad', sectionId);
+        
+        // Go to home page
+        window.location.href = '/'; // use '/index.html' if needed
     });
 });
 
-document.querySelectorAll('.closeTableBtn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        this.closest('.tableModal').style.display = 'none';
-    });
-});
+// 2. This runs on every page load
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const modalToOpen = localStorage.getItem('openModalOnLoad');
+    const sectionToScroll = localStorage.getItem('scrollToSectionOnLoad');
 
-document.querySelectorAll('.tableModal').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+    // First scroll to the section
+    if (sectionToScroll) {
+        const sectionEl = document.getElementById(sectionToScroll);
+        if (sectionEl) {
+            sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Then open the modal after a small delay so scroll finishes
+    if (modalToOpen) {
+        setTimeout(() => {
+            const modal = document.getElementById(modalToOpen);
+            if (modal) {
+                modal.style.display = 'flex';
+            }
+        }, 600); // 600ms = wait for scroll
+        localStorage.removeItem('openModalOnLoad');
+    }
+    
+    if (sectionToScroll) localStorage.removeItem('scrollToSectionOnLoad');
+
+    // Your original modal close logic
+    document.querySelectorAll('.closeTableBtn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            this.closest('.tableModal').style.display = 'none';
+        });
+    });
+
+    document.querySelectorAll('.tableModal').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.tableModal').forEach(modal => {
+                modal.style.display = 'none';
+            });
         }
     });
-});
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.tableModal').forEach(modal => {
-            modal.style.display = 'none';
-        });
-    }
 });
 
 @keyframes popIn {
