@@ -503,57 +503,35 @@ td, th {
   padding: 9px 8px;
   font-size: 12px;
 }
-
-// CLICK: save modal + section, then go home
 document.querySelectorAll('.openTableBtn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-        e.preventDefault(); 
-        const targetModalId = this.getAttribute('data-target'); 
-        const sectionId = this.closest('section')?.id || 'home';
-        
-        localStorage.setItem('openModalOnLoad', targetModalId);
-        localStorage.setItem('scrollToSectionOnLoad', sectionId);
-        
-        window.location.href = 'https://bloemprint.co.za/'; // change to '/index.html' if needed
+    btn.addEventListener('click', function () {
+        const modal = this.closest('div').nextElementSibling;
+        modal.style.display = 'flex';
     });
 });
 
-// ON LOAD: scroll then open modal
-document.addEventListener('DOMContentLoaded', function() {
-    const modalToOpen = localStorage.getItem('openModalOnLoad');
-    const sectionToScroll = localStorage.getItem('scrollToSectionOnLoad');
-
-    if (sectionToScroll) {
-        document.getElementById(sectionToScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    if (modalToOpen) {
-        setTimeout(() => {
-            document.getElementById(modalToOpen).style.display = 'flex';
-        }, 600);
-        localStorage.removeItem('openModalOnLoad');
-    }
-    if (sectionToScroll) localStorage.removeItem('scrollToSectionOnLoad');
-
-    // Close modal logic
-    document.querySelectorAll('.closeTableBtn').forEach(btn => {
-        btn.addEventListener('click', function () {
-            this.closest('.tableModal').style.display = 'none';
-        });
+document.querySelectorAll('.closeTableBtn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.closest('.tableModal').style.display = 'none';
     });
-    document.querySelectorAll('.tableModal').forEach(modal => {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) modal.style.display = 'none';
-        });
-    });
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.tableModal').forEach(modal => {
-                modal.style.display = 'none';
-            });
+});
+
+document.querySelectorAll('.tableModal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
         }
     });
 });
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.tableModal').forEach(modal => {
+            modal.style.display = 'none';
+        });
+    }
+});
+
 @keyframes popIn {
   0% {
     transform: scale(0.8);
