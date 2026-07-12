@@ -504,69 +504,48 @@ td, th {
   font-size: 12px;
 }
 
-// 1. When any .openTableBtn is clicked
+// CLICK: save modal + section, then go home
 document.querySelectorAll('.openTableBtn').forEach(btn => {
     btn.addEventListener('click', function (e) {
         e.preventDefault(); 
-        
-        // Get which modal to open
         const targetModalId = this.getAttribute('data-target'); 
+        const sectionId = this.closest('section')?.id || 'home';
         
-        // Get the section ID the button is inside. Add id="menu" to your section
-        const section = this.closest('section');
-        const sectionId = section ? section.id : 'home';
-        
-        // Save both so home page knows what to do
         localStorage.setItem('openModalOnLoad', targetModalId);
         localStorage.setItem('scrollToSectionOnLoad', sectionId);
         
-        // Go to home page
-        window.location.href = '/'; // use '/index.html' if needed
+        window.location.href = '/'; // change to '/index.html' if needed
     });
 });
 
-// 2. This runs on every page load
+// ON LOAD: scroll then open modal
 document.addEventListener('DOMContentLoaded', function() {
-    
     const modalToOpen = localStorage.getItem('openModalOnLoad');
     const sectionToScroll = localStorage.getItem('scrollToSectionOnLoad');
 
-    // First scroll to the section
     if (sectionToScroll) {
-        const sectionEl = document.getElementById(sectionToScroll);
-        if (sectionEl) {
-            sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        document.getElementById(sectionToScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Then open the modal after a small delay so scroll finishes
     if (modalToOpen) {
         setTimeout(() => {
-            const modal = document.getElementById(modalToOpen);
-            if (modal) {
-                modal.style.display = 'flex';
-            }
-        }, 600); // 600ms = wait for scroll
+            document.getElementById(modalToOpen).style.display = 'flex';
+        }, 600);
         localStorage.removeItem('openModalOnLoad');
     }
-    
     if (sectionToScroll) localStorage.removeItem('scrollToSectionOnLoad');
 
-    // Your original modal close logic
+    // Close modal logic
     document.querySelectorAll('.closeTableBtn').forEach(btn => {
         btn.addEventListener('click', function () {
             this.closest('.tableModal').style.display = 'none';
         });
     });
-
     document.querySelectorAll('.tableModal').forEach(modal => {
         modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
+            if (e.target === modal) modal.style.display = 'none';
         });
     });
-
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             document.querySelectorAll('.tableModal').forEach(modal => {
@@ -575,7 +554,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 @keyframes popIn {
   0% {
     transform: scale(0.8);
