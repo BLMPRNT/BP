@@ -862,6 +862,66 @@ h1 { line-height: 1.25; }
   box-sizing: border-box !important;
 }
 
+
+/* CONTACT ANNOUNCEMENT BAR */
+.contact-announcement-bar {
+    width: 100%;
+    min-height: 38px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    background: #094610;
+    box-sizing: border-box;
+}
+
+.contact-announcement-bar a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff !important;
+    background: transparent !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .65px;
+    line-height: 1.4;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: opacity .25s ease;
+}
+
+.contact-announcement-bar a:hover {
+    opacity: .75;
+}
+
+.contact-announcement-bar .fa {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .contact-announcement-bar {
+        min-height: 36px;
+        gap: 14px;
+        padding: 8px 7px;
+    }
+
+    .contact-announcement-bar a {
+        gap: 5px;
+        font-size: 9px;
+        letter-spacing: .1px;
+    }
+
+    .contact-announcement-bar .fa {
+        font-size: 11px;
+    }
+}
+
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9409948867672595"
      crossorigin="anonymous"></script>
@@ -869,6 +929,16 @@ h1 { line-height: 1.25; }
 </head>
 <body>
 <div class="announcement" style="display:none;color:#fff!important;background:#094610;"><p style="color:#fff!important;background:#094610;font-weight:400!important;font-size:11.5px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin: 0 !important;padding-top:5px;"><a href="tel:+27780408999">+27 78 040 8999</a></p><p style="color:#fff!important;background:#094610;font-weight:400!important;font-size:11.5px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin: 0 !important;padding-top:5px;"><a href="mailto:info@bloemprint.co.za">info@bloemprint.co.za</a></p><p style="color:#fff!important;background:#094610;font-weight:400!important;font-size:11.5px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin: 0 !important;padding-top:5px;"><a href="https://wa.me/message/SHWBSUOP5BPHE1">Chat on WhatsApp</a></p></div>
+<div class="contact-announcement-bar" aria-label="Contact information">
+    <a href="tel:+27780708999">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <span>+27 78 070 8999</span>
+    </a>
+    <a href="mailto:info@bloemprint.co.za">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <span>INFO@BLOEMPRINT.CO.ZA</span>
+    </a>
+</div>
 <div class="header" style="">
  <div class="nav-backdrop" onclick="closeNav()" aria-hidden="true"></div>
  <div id="mySidenav" class="sidenav" aria-label="Main navigation">
