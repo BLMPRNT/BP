@@ -866,12 +866,14 @@ h1 { line-height: 1.25; }
 /* CONTACT ANNOUNCEMENT BAR */
 .contact-announcement-bar {
     width: 100%;
-    min-height: 38px;
-    padding: 8px 16px;
+    min-height: 44px;
+    padding: 9px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 34px;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 6px;
     background: #094610;
     box-sizing: border-box;
 }
@@ -879,46 +881,52 @@ h1 { line-height: 1.25; }
 .contact-announcement-bar a {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+    margin: 0;
+    padding: 0;
     color: #fff !important;
     background: transparent !important;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 14px !important;
     font-weight: 500;
-    letter-spacing: .35px;
-    line-height: 1.4;
+    letter-spacing: .2px;
+    line-height: 1.5;
     text-decoration: none !important;
     white-space: nowrap;
     transition: opacity .25s ease;
 }
 
 .contact-announcement-bar a:hover {
-    opacity: .75;
+    opacity: .8;
 }
 
 .contact-announcement-bar .fa {
     display: inline-block;
+    flex: 0 0 auto;
     padding: 0;
     margin: 0;
-    font-size: 15px;
+    color: #fff;
+    font-size: 14px;
     line-height: 1;
 }
 
 @media (max-width: 480px) {
     .contact-announcement-bar {
-        min-height: 36px;
-        gap: 14px;
-        padding: 8px 7px;
+        min-height: 42px;
+        padding: 8px 10px;
+        column-gap: 16px;
+        row-gap: 5px;
     }
 
     .contact-announcement-bar a {
+        font-size: 14px !important;
         gap: 6px;
-        font-size: 15px;
-        letter-spacing: .35px;
+        letter-spacing: .1px;
     }
 
     .contact-announcement-bar .fa {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
