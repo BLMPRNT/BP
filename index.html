@@ -933,177 +933,220 @@ h1 { line-height: 1.25; }
 }
 
 
+
 /* =========================================================
-   CONSISTENT DESIGN ACROSS ALL SCREEN SIZES
-   Uses the compact iPhone SE layout as the visual baseline.
+   EXACT iPHONE SE 2ND GEN DESIGN ON EVERY SCREEN
+   Desktop/tablet use the same 375px composition, dimensions,
+   spacing and proportions instead of a separate desktop layout.
    ========================================================= */
+
+/* The entire website is treated as the same fixed-width canvas.
+   On desktop it is centered; on an iPhone SE (375px CSS width)
+   it fills the viewport exactly. */
+html,
+body {
+  width: 375px !important;
+  min-width: 375px !important;
+  max-width: 375px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow-x: hidden !important;
+}
+
+body {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Never introduce desktop-sized containers. */
+.site-header-row,
+.container,
+.hero-image-container,
+.main {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Header: exactly the compact phone dimensions. */
+.site-header-row {
+  min-height: 58px !important;
+  margin: 15px 0 !important;
+  padding: 0 16px !important;
+  box-sizing: border-box !important;
+}
+
+.site-logo-link img {
+  height: 42px !important;
+  max-width: 58vw !important;
+}
+
+.site-menu-button {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  margin-right: 0 !important;
+  padding: 4px !important;
+  font-size: 26px !important;
+}
+
+/* Hero: exactly the phone composition. */
+.container,
+.hero-image-container {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 25px 16px !important;
+  box-sizing: border-box !important;
+  border-radius: 0 0 0 50px !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.container > div:first-child p {
+  margin-top: 90px !important;
+  font-size: 15px !important;
+}
+
+.container p2 {
+  display: block !important;
+  font-size: 22px !important;
+  line-height: 2 !important;
+  margin: 0 10px !important;
+}
+
+.container > div:last-child {
+  margin-top: 15px !important;
+  margin-bottom: 50px !important;
+}
+
+.container > div:last-child p {
+  display: block !important;
+  margin: 27.5px !important;
+}
+
+/* Main content: same phone spacing and typography. */
+.main {
+  margin: 0 0 15px !important;
+  padding: 25px 16px !important;
+  box-sizing: border-box !important;
+  font-size: 0.75em !important;
+  line-height: 1.4 !important;
+}
+
+h1 {
+  font-size: 32px !important;
+  line-height: 1.25 !important;
+  margin: 5px 35px !important;
+}
+
+h2 {
+  font-size: 22px !important;
+}
+
+p {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  letter-spacing: .35px !important;
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+}
+
+p2 {
+  font-size: 22px !important;
+  line-height: 2 !important;
+}
+
+/* Services: same phone image proportions. */
+#services img.center {
+  width: 80% !important;
+  max-width: none !important;
+  border-radius: 25px !important;
+}
+
+#services > div[style*="margin-top:15px"][style*="text-align:center"] {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#services p {
+  max-width: none !important;
+}
+
+/* Prices popup: same phone card dimensions/behavior.
+   The popup itself remains viewport-bound while the card keeps
+   the exact phone styling. */
+.tableModal {
+  padding: 16px !important;
+  background: rgba(0, 0, 0, .35) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  align-items: center !important;
+}
+
+.tableContent {
+  width: 100% !important;
+  max-width: none !important;
+  max-height: calc(100dvh - 32px) !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  border-radius: 37.5px !important;
+  background: #fff !important;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, .12) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  table-layout: auto !important;
+}
+
+td,
+th {
+  overflow-wrap: anywhere;
+}
+
+/* Same floating WhatsApp position and size. */
+.whatsapp-btn {
+  right: 16px !important;
+  bottom: 16px !important;
+  padding: 10px 15px !important;
+}
+
+/* Same Instagram proportions. */
+.widget-container {
+  width: 100% !important;
+  max-width: 765px !important;
+  aspect-ratio: 1 / 1 !important;
+  padding-top: 0 !important;
+}
+
+/* Prevent any later desktop media rule from widening the canvas. */
 @media (min-width: 600px) {
-  /* Keep the same header proportions and spacing as mobile */
-  .site-header-row {
-    width: 100% !important;
-    max-width: none !important;
-    min-height: 58px !important;
-    margin: 15px 0 !important;
-    padding: 0 16px !important;
+  html,
+  body {
+    width: 375px !important;
+    min-width: 375px !important;
+    max-width: 375px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .site-logo-link img {
-    height: 42px !important;
-    max-width: 58vw !important;
-  }
-
-  .site-menu-button {
-    min-width: 44px !important;
-    min-height: 44px !important;
-    margin-right: 0 !important;
-    padding: 4px !important;
-    font-size: 26px !important;
-  }
-
-  /* Keep the hero compact rather than creating a large desktop hero */
+  .site-header-row,
   .container,
-  .hero-image-container {
-    width: 100% !important;
-    max-width: none !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 25px 16px !important;
-    border-radius: 0 0 0 50px !important;
-    background-position: center !important;
-    background-size: cover !important;
-  }
-
-  .container > div:first-child p {
-    margin-top: 90px !important;
-    font-size: 15px !important;
-  }
-
-  .container p2 {
-    display: block !important;
-    font-size: 22px !important;
-    line-height: 2 !important;
-    margin: 0 10px !important;
-  }
-
-  .container > div:last-child {
-    margin-top: 15px !important;
-    margin-bottom: 50px !important;
-  }
-
-  .container > div:last-child p {
-    display: block !important;
-    margin: 27.5px !important;
-  }
-
-  /* Keep content width, typography and spacing consistent */
+  .hero-image-container,
   .main {
     width: 100% !important;
     max-width: none !important;
-    margin: 0 0 15px !important;
-    padding: 25px 16px !important;
-    font-size: 0.75em !important;
-    line-height: 1.4 !important;
-  }
-
-  h1 {
-    font-size: 32px !important;
-    line-height: 1.25 !important;
-    margin: 5px 35px !important;
-  }
-
-  h2 {
-    font-size: 22px !important;
-  }
-
-  p {
-    font-size: 15px !important;
-    line-height: 1.85 !important;
-    letter-spacing: .35px !important;
-    margin-left: 30px !important;
-    margin-right: 30px !important;
-  }
-
-  p2 {
-    font-size: 22px !important;
-    line-height: 2 !important;
-  }
-
-  /* Service images use the same proportion as the phone layout */
-  #services img.center {
-    width: 80% !important;
-    max-width: none !important;
-    border-radius: 25px !important;
-  }
-
-  #services > div[style*="margin-top:15px"][style*="text-align:center"] {
-    max-width: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  #services p {
-    max-width: none !important;
-  }
-
-  /* Keep the prices pop-up visually consistent with the phone version */
-  .tableModal {
-    padding: 16px !important;
-    background: rgba(0, 0, 0, .35) !important;
-    backdrop-filter: blur(2px) !important;
-    -webkit-backdrop-filter: blur(2px) !important;
-    align-items: center !important;
-  }
-
-  .tableContent {
-    width: 100% !important;
-    max-width: 900px !important;
-    max-height: calc(100dvh - 32px) !important;
-    padding: 24px !important;
-    border-radius: 37.5px !important;
-    background: #fff !important;
-    box-shadow: 0 20px 70px rgba(0, 0, 0, .12) !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  table {
-    table-layout: auto !important;
-  }
-
-  td,
-  th {
-    overflow-wrap: anywhere;
-  }
-
-  .whatsapp-btn {
-    right: 16px !important;
-    bottom: 16px !important;
-    padding: 10px 15px !important;
-  }
-
-  /* Keep the Instagram widget from growing into a different desktop design */
-  .widget-container {
-    width: 100% !important;
-    max-width: 765px !important;
-    aspect-ratio: 1 / 1 !important;
-    padding-top: 0 !important;
   }
 }
 
-/* Extra-wide screens still use the same compact composition */
 @media (min-width: 1280px) {
-  .site-header-row,
-  .container,
-  .main {
-    max-width: none !important;
-  }
-
-  .container {
-    width: 100% !important;
-  }
-
-  .main {
-    width: 100% !important;
+  html,
+  body {
+    width: 375px !important;
+    min-width: 375px !important;
+    max-width: 375px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
