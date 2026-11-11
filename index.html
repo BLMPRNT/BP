@@ -935,21 +935,23 @@ h1 { line-height: 1.25; }
 
 
 /* =========================================================
-   EXACT iPHONE SE 2ND GEN DESIGN ON EVERY SCREEN
-   Desktop/tablet use the same 375px composition, dimensions,
-   spacing and proportions instead of a separate desktop layout.
+   SAME IPHONE SE 2ND GEN DESIGN LANGUAGE ON EVERY SCREEN
+   The compact mobile styling is the single design system.
+   Larger screens use the same dimensions, spacing, typography,
+   radii and proportions — only the available width increases.
    ========================================================= */
 
-/* The entire website is treated as the same fixed-width canvas.
-   On desktop it is centered; on an iPhone SE (375px CSS width)
-   it fills the viewport exactly. */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 html,
 body {
-  width: 375px !important;
-  min-width: 375px !important;
-  max-width: 375px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   overflow-x: hidden !important;
 }
 
@@ -958,17 +960,10 @@ body {
   margin-bottom: 0 !important;
 }
 
-/* Never introduce desktop-sized containers. */
-.site-header-row,
-.container,
-.hero-image-container,
-.main {
+/* Header — identical compact design on every screen. */
+.site-header-row {
   width: 100% !important;
   max-width: none !important;
-}
-
-/* Header: exactly the compact phone dimensions. */
-.site-header-row {
   min-height: 58px !important;
   margin: 15px 0 !important;
   padding: 0 16px !important;
@@ -988,9 +983,11 @@ body {
   font-size: 26px !important;
 }
 
-/* Hero: exactly the phone composition. */
+/* Hero — same padding, radius, typography and spacing everywhere. */
 .container,
 .hero-image-container {
+  width: 100% !important;
+  max-width: none !important;
   min-height: 0 !important;
   margin: 0 !important;
   padding: 25px 16px !important;
@@ -1022,8 +1019,10 @@ body {
   margin: 27.5px !important;
 }
 
-/* Main content: same phone spacing and typography. */
+/* Main — same compact phone spacing and typography everywhere. */
 .main {
+  width: 100% !important;
+  max-width: none !important;
   margin: 0 0 15px !important;
   padding: 25px 16px !important;
   box-sizing: border-box !important;
@@ -1054,7 +1053,7 @@ p2 {
   line-height: 2 !important;
 }
 
-/* Services: same phone image proportions. */
+/* Services — identical image treatment everywhere. */
 #services img.center {
   width: 80% !important;
   max-width: none !important;
@@ -1062,6 +1061,7 @@ p2 {
 }
 
 #services > div[style*="margin-top:15px"][style*="text-align:center"] {
+  width: 100% !important;
   max-width: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -1071,9 +1071,7 @@ p2 {
   max-width: none !important;
 }
 
-/* Prices popup: same phone card dimensions/behavior.
-   The popup itself remains viewport-bound while the card keeps
-   the exact phone styling. */
+/* Prices popup — identical card design on every screen. */
 .tableModal {
   padding: 16px !important;
   background: rgba(0, 0, 0, .35) !important;
@@ -1083,7 +1081,7 @@ p2 {
 }
 
 .tableContent {
-  width: 100% !important;
+  width: calc(100% - 32px) !important;
   max-width: none !important;
   max-height: calc(100dvh - 32px) !important;
   padding: 24px !important;
@@ -1104,14 +1102,14 @@ th {
   overflow-wrap: anywhere;
 }
 
-/* Same floating WhatsApp position and size. */
+/* Floating WhatsApp — same size and offset everywhere. */
 .whatsapp-btn {
   right: 16px !important;
   bottom: 16px !important;
   padding: 10px 15px !important;
 }
 
-/* Same Instagram proportions. */
+/* Instagram — same square treatment, allowed to use available width. */
 .widget-container {
   width: 100% !important;
   max-width: 765px !important;
@@ -1119,35 +1117,12 @@ th {
   padding-top: 0 !important;
 }
 
-/* Prevent any later desktop media rule from widening the canvas. */
-@media (min-width: 600px) {
-  html,
-  body {
-    width: 375px !important;
-    min-width: 375px !important;
-    max-width: 375px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .site-header-row,
-  .container,
-  .hero-image-container,
-  .main {
-    width: 100% !important;
-    max-width: none !important;
-  }
-}
-
-@media (min-width: 1280px) {
-  html,
-  body {
-    width: 375px !important;
-    min-width: 375px !important;
-    max-width: 375px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+/* Newsletter — same compact rounded treatment; never introduce a
+   separate desktop width/design. */
+.subscription-container {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
 }
 
 </style>
