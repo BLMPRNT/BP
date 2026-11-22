@@ -14,6 +14,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://bloemprint.co.za/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:site_name" content="BloemPrint">
+<meta property="og:title" content="BloemPrint - The Best of Print">
+<meta property="og:description" content="Based in Bloemfontein, we specialize in providing high-quality printing services for a wide range of needs. Contact us at info@bloemprint.co.za or 078 040 8999 to make an enquiry or get a quote. Whether you're looking to promote your business or organization, create custom t-shirts for an event or team, or print personalized calendars and posters for your home, we've got your back.">
+<meta property="og:url" content="https://bloemprint.co.za/">
+<meta property="og:image" content="https://bloemprint.co.za/img.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BloemPrint - The Best of Print">
+<meta name="twitter:description" content="Based in Bloemfontein, we specialize in providing high-quality printing services for a wide range of needs. Contact us at info@bloemprint.co.za or 078 040 8999 to make an enquiry or get a quote. Whether you're looking to promote your business or organization, create custom t-shirts for an event or team, or print personalized calendars and posters for your home, we've got your back.">
+<link rel="preload" as="image" href="/img.png" fetchpriority="high">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://bloemprint.co.za/#business",
+      "name": "BloemPrint",
+      "url": "https://bloemprint.co.za/",
+      "description": "Based in Bloemfontein, we specialize in providing high-quality printing services for a wide range of needs.",
+      "email": "info@bloemprint.co.za",
+      "telephone": "+27780408999",
+      "areaServed": [
+        {"@type": "City", "name": "Bloemfontein"},
+        {"@type": "Country", "name": "South Africa"}
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/bloemprint",
+        "https://www.facebook.com/profile.php?id=100093587892651"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bloemprint.co.za/#website",
+      "url": "https://bloemprint.co.za/",
+      "name": "BloemPrint",
+      "publisher": {"@id": "https://bloemprint.co.za/#business"},
+      "inLanguage": "en-ZA"
+    }
+  ]
+}
+</script>
+
 <title>BloemPrint - The Best of Print</title>
 <style>
 ::selection {
@@ -554,34 +615,7 @@ th {
   padding: 9px 8px;
   font-size: 12px;
 }
-document.querySelectorAll('.openTableBtn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const modal = this.closest('div').nextElementSibling;
-        modal.style.display = 'flex';
-    });
-});
-
-document.querySelectorAll('.closeTableBtn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        this.closest('.tableModal').style.display = 'none';
-    });
-});
-
-document.querySelectorAll('.tableModal').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.tableModal').forEach(modal => {
-            modal.style.display = 'none';
-        });
-    }
-});
+/* Modal JavaScript moved below the page content. */
 
 @keyframes popIn {
   0% {
@@ -1213,6 +1247,13 @@ td, th {
     padding: 10px 15px !important;
   }
 }
+
+/* Accessibility refinement: visible keyboard focus, preserving the design. */
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+  outline: 3px solid #C888A8;
+  outline-offset: 3px;
+}
+
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9409948867672595"
      crossorigin="anonymous"></script>
@@ -1243,7 +1284,7 @@ td, th {
   <a href="https://www.instagram.com/bloemprint" style="color:#fff;display:inline-block;" onclick="closeNav()"><i class="fa fa-instagram" style="font-size:20px!important;"></i></a><a href="https://www.facebook.com/profile.php?id=100093587892651" style="color:#fff;display:inline-block;" onclick="closeNav()"><i class="fa fa-facebook" style="font-size:20px!important;"></i></a><a href="https://wa.me/message/SHWBSUOP5BPHE1" style="color:#fff;display:inline-block;" onclick="closeNav()"><i class="fa fa-whatsapp" style="font-size:20px!important;"></i></a>
  </div>
 </div>
-<div class="site-header-row" style="margin-top:15px;margin-bottom:15px;"><a href="/" class="delayed-link site-logo-link" style="margin-left:20px;display:inline-block!important;"><img class="center" src="BPLogo.svg" alt="BloemPrint" width="auto" height="45px"></a><span class="site-menu-button" style="float:right;font-size:26px;cursor:pointer;color:#111;display:inline-block!important;padding:7px;margin-right:20px;" width="auto" height="50px" onclick="openNav()" aria-label="Open menu">&#9776;</span></div>
+<div class="site-header-row" style="margin-top:15px;margin-bottom:15px;"><a href="/" class="delayed-link site-logo-link" style="margin-left:20px;display:inline-block!important;"><img class="center" src="BPLogo.svg" alt="BloemPrint" width="auto" height="45px" loading="eager" fetchpriority="high" decoding="async"></a><span class="site-menu-button" style="float:right;font-size:26px;cursor:pointer;color:#111;display:inline-block!important;padding:7px;margin-right:20px;" width="auto" height="50px" onclick="openNav()" aria-label="Open menu">&#9776;</span></div>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -1270,7 +1311,7 @@ function closeNav() {
 <div class="main" id="services" style="text-align:center!important;">
 <h1 style="text-align:center!important;color:#111;">WHAT WE <p3 style="color:#9E1A50!important;">OFFER</p3></h1>
 <div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Perfect for businesses, sports teams, schools, or anyone looking for custom t-shirts.<br><br>Whether you need a small batch of t-shirts for your team or a large order for your business, leave it to us.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Perfect for businesses, sports teams, schools, or anyone looking for custom t-shirts.<br><br>Whether you need a small batch of t-shirts for your team or a large order for your business, leave it to us.</p></div>
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn"  style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 
@@ -1281,7 +1322,7 @@ function closeNav() {
         
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>T-Shirt Printing</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="t-shirts.png" alt="T-Shirt Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <table>
   <tr>
     <th>Sizes</th>
@@ -1323,12 +1364,12 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-1" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 
 <br><div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Custom Printed Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Promotional caps, being highly visible, attract attention and are excellent for marketing your brand or product.<br><br>Whether you need a single cap or a bulk order, we cater to your needs.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Custom Printed Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Promotional caps, being highly visible, attract attention and are excellent for marketing your brand or product.<br><br>Whether you need a single cap or a bulk order, we cater to your needs.</p></div>
 
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
@@ -1340,7 +1381,7 @@ function closeNav() {
         
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Caps</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="caps.png" alt="Caps | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <table>
   <tr>
     <th>Sizes</th>
@@ -1372,12 +1413,12 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-2" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 
 <br><div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Flyers</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="flyers.png" alt="Custom Flyer Printing | BloemPrint" href="" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Flyers are a great way to promote your business or event.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect flyer for your needs.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="flyers.png" alt="Custom Flyer Printing | BloemPrint" href="" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Flyers are a great way to promote your business or event.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect flyer for your needs.</p></div>
 
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
@@ -1389,7 +1430,7 @@ function closeNav() {
         
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Flyers</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="flyers.png" alt="Flyers | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="flyers.png" alt="Flyers | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <p style=" text-align:left; margin-bottom:10px;">
   * Single Sided
 </p>
@@ -1470,12 +1511,12 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-3" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 
 <br><div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Posters</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="posters.png" alt="Custom Poster Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Whether you're promoting an event, advertising a product, or just looking to decorate your space, we can help.<br><br>We offer a variety of poster sizes and printing options to help you create the perfect design for your needs.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="posters.png" alt="Custom Poster Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Whether you're promoting an event, advertising a product, or just looking to decorate your space, we can help.<br><br>We offer a variety of poster sizes and printing options to help you create the perfect design for your needs.</p></div>
 
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
@@ -1487,7 +1528,7 @@ function closeNav() {
         
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Posters</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="posters.png" alt="Posters | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="posters.png" alt="Posters | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <p style=" text-align:left; margin-bottom:10px;">
   * Single Sided
 </p>
@@ -1534,12 +1575,12 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-4" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 
 <br><div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Stickers</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="stickers.png" alt="Custom Sticker Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Stickers are a great way to promote your brand or add a personal touch to your products or packaging.<br><br>We offer a range of sticker sizes and shapes, and we can print your design using high-quality printable vinyl or sticker paper.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="stickers.png" alt="Custom Sticker Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Stickers are a great way to promote your brand or add a personal touch to your products or packaging.<br><br>We offer a range of sticker sizes and shapes, and we can print your design using high-quality printable vinyl or sticker paper.</p></div>
 
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
@@ -1551,7 +1592,7 @@ function closeNav() {
         
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Stickers</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="stickers.png" alt="Stickers | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="stickers.png" alt="Stickers | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <p style=" text-align:left; margin-bottom:10px;">
   * Round (50 mm)
 </p>
@@ -1612,12 +1653,12 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-5" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 
 <br><div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Business Cards</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="cards.png" alt="Business Card Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Your business card is often the first impression that potential clients or customers will have of your business, so it's important to make it count.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect business card for your needs.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="cards.png" alt="Business Card Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Your business card is often the first impression that potential clients or customers will have of your business, so it's important to make it count.<br><br>Whether you need a few hundred or a few thousand, we can help you create the perfect business card for your needs.</p></div>
 
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn" class="" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
@@ -1629,7 +1670,7 @@ function closeNav() {
             
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Business Cards</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="cards.png" alt="Business Cards | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="cards.png" alt="Business Cards | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <table>
   <tr>
     <th>Quantities</th>
@@ -1662,12 +1703,12 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-6" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 
 <br><div style="font-size:22px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Calendars</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="calendars.png" alt="Custom Calendar Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"><p>Custom calendars are a great way to stay organized and keep your schedule on track.<br><br>We offer personalized calendars that feature your own photos and designs.</p></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="calendars.png" alt="Custom Calendar Printing | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"><p>Custom calendars are a great way to stay organized and keep your schedule on track.<br><br>We offer personalized calendars that feature your own photos and designs.</p></div>
 
 <!-- Trigger Button -->
 <div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a class="openTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;See Prices&nbsp;&nbsp;&nbsp;</a></p></div>
@@ -1679,7 +1720,7 @@ function closeNav() {
         
     <!-- Your Table -->
 <div style="font-size:24px;color:#C888A8;display:inline!important;text-align:center!important;"><p2>Calendars</p2>✓</div>
-<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="calendars.png" alt="Calendars | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;"></div>
+<div style="margin-top:15px;margin-bottom:15px;text-align:center;"><img class="center" src="calendars.png" alt="Calendars | BloemPrint" href="/" width="80%" height="auto" style="border-radius: 25px;border: 0 solid #094610;" loading="lazy" decoding="async"></div>
 <p style=" text-align:left; margin-bottom:10px;">
   * Single Sided
 </p>
@@ -1726,7 +1767,7 @@ function closeNav() {
 </table>
 
 <!-- Close Button -->
-<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="rd" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
+<div style="margin-top:15px;margin-bottom:30px;"><p style="margin:27.5px;"><a id="quote-link-7" href="mailto:info@bloemprint.co.za?&subject=Quote Request&body=Good day,%0D%0A%0D%0AI'd like to get a quote for%20" style="color:#fff!important;text-align:left!important;line-height:2.1;text-decoration:none!important;">&nbsp;&nbsp;&nbsp;Get a Quote&nbsp;&nbsp;&nbsp;</a></p><p style="margin:27.5px;"><a class="closeTableBtn" style="color:#B85880 !important;line-height:2.1;text-decoration:none!important; border-radius: 50px; border: 1.5px solid #B85880; padding: 10px;  height: 0; font-size: 13px !important; text-align: center !important;">&nbsp;&nbsp;&nbsp;Hide Prices&nbsp;&nbsp;&nbsp;</a></p></div>
 </div>
 </div>
 <script>
@@ -1852,7 +1893,7 @@ document.addEventListener('keydown', function(e) {
     </script>
 <footer style="padding-top:0;text-align:left!important;">
 <div class="announcement" style="display:none;margin-top:25px!important;margin-bottom:5px!important;"><p style="color:#fff!important;background:#094610;font-weight:400!important;font-size:14px!important;text-transform:none;font-family:'Poppins', sans-serif;letter-spacing:1.2px;margin:0!important;padding-top:5px;"><marquee>R60 delivery fee for orders in Bloemfontein and R120 for all other areas in South Africa.</marquee></p></div>
-<div style="margin-top:0;margin-bottom:25px;text-align:center!important;"><a href="/" class="delayed-link"><img class="center" src="IMG_5853.jpeg" href="/" alt="" width="110px" height="auto"></a></div>
+<div style="margin-top:0;margin-bottom:25px;text-align:center!important;"><a href="/" class="delayed-link"><img class="center" src="IMG_5853.jpeg" href="/" alt="" width="110px" height="auto" loading="lazy" decoding="async"></a></div>
 <p style="text-align:center!important;">We're always ready to help you with any questions or concerns you may have, and we work hard to ensure that every project is completed on time and to your satisfaction.</p>
 <div style="text-align:center !important;margin: 25px 0;"><p style=""><a href="tel:+27780408999" style="margin: 0 !important;"><i class="fa fa-phone" style=""></i>078 040 8999</a></p><p style=""><a href="mailto:info@bloemprint.co.za" style="margin: 0 !important;"><i class="fa fa-envelope-o" style=""></i>info@bloemprint.co.za</a></p></div>
 <p style="text-align:center!important;">Mon - Fri: 08:00 - 17:00</p><p style="text-align:center!important;">Sat: 08:00 - 12:00</p><p style="text-align:center!important;">Sun & Public Holidays: Closed</p></div>
@@ -1915,7 +1956,7 @@ document.addEventListener('keydown', function(e) {
     <h2 style="text-align: center; margin: 0 0 1rem 0;font-weight: 500;font-size: 22px!important;letter-spacing: 1px!important;">Instagram Feed<span class="highlight"></span></h2>
     <p style="text-align:center;color:#000!important;">Follow <a href="https://www.instagram.com/bloemprint">@bloemprint</a> for your daily dose of inspiration.</p>
     <div class="widget-container" style="margin-top:25px!important;position: relative; z-index: 0; overflow: hidden;">
-        <iframe src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Posts from Instagram"></iframe>
+        <iframe loading="lazy" src="https://snapwidget.com/embed/1078533" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" title="Posts from Instagram"></iframe>
         <a href="https://www.instagram.com/bloemprint" target="_blank" rel="noopener noreferrer" aria-label="Visit BloemPrint on Instagram" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;display:block;"></a>
     </div>
 </div>
@@ -1992,4 +2033,47 @@ function closeModal() {
     }, 250);
 }
 </script>
-  </body></html>
+  
+<script>
+/* Delegated modal handling for all service price popups. */
+document.addEventListener('click', function (event) {
+  const openButton = event.target.closest('.openTableBtn');
+  if (openButton) {
+    const modal = openButton.closest('div').nextElementSibling;
+    if (modal && modal.classList.contains('tableModal')) {
+      modal.style.display = 'flex';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    return;
+  }
+
+  const closeButton = event.target.closest('.closeTableBtn');
+  if (closeButton) {
+    const modal = closeButton.closest('.tableModal');
+    if (modal) closePriceModal(modal);
+    return;
+  }
+
+  const backdrop = event.target.closest('.tableModal');
+  if (backdrop && event.target === backdrop) closePriceModal(backdrop);
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    document.querySelectorAll('.tableModal').forEach(function (modal) {
+      if (modal.style.display === 'flex') closePriceModal(modal);
+    });
+  }
+});
+
+function closePriceModal(modal) {
+  modal.style.display = 'none';
+  modal.removeAttribute('role');
+  modal.removeAttribute('aria-modal');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body></html>
