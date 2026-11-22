@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://bloemprint.co.za/sitemap.xml
